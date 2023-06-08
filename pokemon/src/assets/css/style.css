@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&family=Press+Start+2P&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #123;
+}
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    height: 7rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(17,34,51,1) 100%);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 7rem;
+    padding: 0 5rem ;
+}
+nav a{
+    font-size: 2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(240, 241, 240);
+    text-decoration: none;
+}
+.search{
+    width: 20rem;
+}
+.search input{
+    border: none;
+    border: 2px solid rgba(240, 240, 241, 0.842);
+    padding: 0.5rem 1rem;
+    border-radius: 4rem;
+    background-color: transparent;
+    color: rgb(240, 241, 240);
+    outline: none;
+    width: 20rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+::placeholder{
+    color: rgba(240, 241, 240, 0.842);
+}
+section{
+    margin-top: 3rem;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 1rem;
+    padding: 1.4rem;
+}
+.card-pokemon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #aaaaaaee;
+    border-radius: 0.8rem;
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+.card-pokemon::after{
+    content: '';
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -5rem;
+    right: -5rem;
+    background-color: #ffffff15;
+    z-index: -1;
+}
+.card-pokemon:hover::after{
+    width: 250%;
+    height: 250%;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transition: cubic-bezier(.71,.01,.53,.89) 1s ;
+}
+.card-img{
+    height: 11.5rem;
+}
+.card-img img{
+    width: 7rem;
+}
+.card-text{
+    color: #050505;
+    align-items: center;
+}
+.card-text p{
+    background-color: #05050515;
+    text-align: center;
+    border-radius: 0.6rem;
+    width: 10rem;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+@media (max-width: 1164px){
+    .wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px){
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 500px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 360px){
+    nav a{
+        font-size: 1.6rem;
+    }
+}
