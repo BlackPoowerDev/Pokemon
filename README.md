@@ -1,4 +1,4 @@
-# 📝 LISTAGEM POKEMONS
+# 📝 LISTAGEM DE POKEMONS
 
 **Sistema simples para listar pokemons**
 
